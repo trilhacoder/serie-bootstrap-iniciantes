@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  </head>
+  <body class="container">
+    <h1>Formulário (Validacoes)</h1>
+
+    <form class="formCadastroEmail" novalidate>
+      <div class="mb-3 position-relative">
+        <label for="email" class="form-label">E-mail *</label>
+        <input type="email" name="email" class="form-control" id="email" required>
+        <div class="invalid-feedback">E-mail inválido!</div>
+        <div class="valid-feedback">E-mail inválido!</div>
+      </div>
+
+      <div class="form-text">* campos obrigatórios</div>
+    
+      <button type="submit" class="btn btn-primary mt-3">Submit</button>
+    </form>
+
+    <div class="toast-container position-fixed top-0 right-0 p-3">
+      <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <strong class="me-auto">Aviso</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          Cadastro realizado com sucesso!
+        </div>
+      </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="form-validacoes.js" defer></script>
+  </body>
+</html>
