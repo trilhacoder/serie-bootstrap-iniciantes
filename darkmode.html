@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <label>Habilitar dark mode</label>
+        <input type="checkbox">    
+        <h1 class="titulo">Dark mode</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </body>
+</html>
+<style>
+    /* estilo dark mode global */
+    .dark-mode {
+        --cor-fundo: black;
+        --cor-texto: white;
+    }
+    body {
+        background-color: var(--cor-fundo);
+        color: var(--cor-texto);
+    }
+    /* estilo dark mode local */
+    .dark-mode .titulo {
+        color: lightseagreen;
+    }
+</style>
+<script>
+    document.querySelector("input").onclick = () => {
+        document.body.classList.toggle("dark-mode")
+    }
+</script>
